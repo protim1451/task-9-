@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../FirebaseProvider/FirebaseProvider";
 import { useForm } from "react-hook-form";
 import SocialLogin from "./SocialLogin";
+import useAuth from "../Hooks/useAuth";
 
 
 const Login = () => {
@@ -25,7 +26,7 @@ const Login = () => {
         })
       }
 
-    const {signInUser} = useContext(AuthContext);
+    const {signInUser} = useAuth();
 
     return (
         <div>
