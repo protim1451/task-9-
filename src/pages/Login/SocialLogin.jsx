@@ -8,7 +8,7 @@ const SocialLogin = () => {
         <div>
             <hr />
             <h3 className="font-bold text-2xl my-4 ml-3">Login With</h3>
-            <div className="flex gap-4 justify-center items-center mb-3">
+            <div className="flex gap-4 justify-around items-center mb-3">
                 <button onClick={()=>googleLogin()} 
                 className="btn bg-blue-400"><FaGoogle></FaGoogle>Google</button>
                 <button onClick={()=>gitLogin()}

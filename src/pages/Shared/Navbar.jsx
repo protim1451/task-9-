@@ -1,15 +1,19 @@
-import { NavLink } from "react-router-dom";
-
+import React from "react";
+import { Link, NavLink } from "react-router-dom";
+import useAuth from "../Hooks/useAuth";
+import "./Navbar.css";
 
 const Navbar = () => {
+    const { logOut, user } = useAuth();
 
-    const navlinks = <>
-        <li><NavLink to='/'>Home</NavLink></li>
-        <li><NavLink to='/login'>Login</NavLink></li>
-        <li><NavLink to='/contact'>Contact Us</NavLink></li>
-        <li><NavLink to="/blogs">Blogs</NavLink></li>
-        
-    </>
+    const navlinks = (
+        <>
+            <li><NavLink to='/'>Home</NavLink></li>
+            <li><NavLink to='/login'>Login</NavLink></li>
+            <li><NavLink to='/contact'>Contact Us</NavLink></li>
+            <li><NavLink to="/blogs">Blogs</NavLink></li>
+        </>
+    );
 
     return (
         <div>
@@ -30,9 +34,23 @@ const Navbar = () => {
                         {navlinks}
                     </ul>
                 </div>
-                <div className="navbar-end">
-                    <a className="btn bg-[#2CCCD3]">Log In</a>
-                </div>
+                {user?.email ? (
+                    <div className="navbar-end relative">
+                        <div className="profile-wrapper">
+                            <img className="rounded-full w-10 h-10 cursor-pointer" src={user.photoURL} alt={user.displayName} />
+                            <span className="profile-name">{user.displayName}</span>
+                        </div>
+                        <Link>
+                            <button onClick={logOut} className="btn bg-[#2CCCD3]">Log Out</button>
+                        </Link>
+                    </div>
+                ) : (
+                    <div className="navbar-end">
+                        <Link to='/login'>
+                            <button className="btn bg-[#2CCCD3]">Log In</button>
+                        </Link>
+                    </div>
+                )}
             </div>
         </div>
     );

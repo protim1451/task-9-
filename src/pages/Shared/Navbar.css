@@ -1,0 +1,24 @@
+.profile-wrapper {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .profile-name {
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-90%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.3s linear;
+  }
+  
+  .profile-wrapper:hover .profile-name {
+    visibility: visible;
+    opacity: 1;
+  }
+  
