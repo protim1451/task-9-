@@ -1,0 +1,147 @@
+[
+    {
+      "id": 1,
+      "estate_title": "Spacious Family Home",
+      "segment_name": "Single-family homes",
+      "description": "Beautiful single-family home with plenty of space for a growing family. Features a large backyard and modern amenities.",
+      "price": "$500,000",
+      "status": "sale",
+      "area": "2,500 sq ft",
+      "location": "Los Angeles, CA",
+      "facilities": ["Backyard", "Updated Kitchen", "Attached Garage"],
+      "image": "https://i.ibb.co/896YZDs/Spacious-Family-Home.jpg"
+    },
+    {
+      "id": 2,
+      "estate_title": "Cozy Townhouse",
+      "segment_name": "Single-family homes",
+      "description": "Charming townhouse in a quiet neighborhood. Perfect for young professionals or small families.",
+      "price": "$350,000",
+      "status": "sale",
+      "area": "1,800 sq ft",
+      "location": "Denver, CO",
+      "facilities": ["Balcony", "Community Pool", "Fitness Center"],
+      "image": "https://i.ibb.co/gWjjfdM/Cozy-Townhouse.jpg"
+    },
+    {
+      "id": 3,
+      "estate_title": "Modern Suburban Home",
+      "segment_name": "Single-family homes",
+      "description": "Contemporary single-family home in a suburban neighborhood. Features an open floor plan and a spacious backyard.",
+      "price": "$450,000",
+      "status": "sale",
+      "area": "2,200 sq ft",
+      "location": "Atlanta, GA",
+      "facilities": ["Gourmet Kitchen", "Home Office", "Backyard Patio"],
+      "image": "https://i.ibb.co/g9PSJFw/Modern-Suburban-Home.jpg"
+    },
+    {
+      "id": 4,
+      "estate_title": "Luxury Apartment",
+      "segment_name": "Apartments",
+      "description": "Stunning luxury apartment in a high-rise building. Offers breathtaking city views and upscale amenities.",
+      "price": "$3,000/month",
+      "status": "rent",
+      "area": "1,200 sq ft",
+      "location": "New York City, NY",
+      "facilities": ["Rooftop Pool", "Fitness Center", "Concierge Service"],
+      "image": "https://i.ibb.co/87H7q00/Luxury-Apartment.jpg"
+    },
+    {
+      "id": 5,
+      "estate_title": "Downtown Loft",
+      "segment_name": "Apartments",
+      "description": "Modern loft apartment in the heart of downtown. Features exposed brick walls and industrial-style accents.",
+      "price": "$2,200/month",
+      "status": "rent",
+      "area": "900 sq ft",
+      "location": "Chicago, IL",
+      "facilities": ["Open Floor Plan", "Balcony", "Gym"],
+      "image": "https://i.ibb.co/YybJ3Sf/Downtown-Loft.jpg"
+    },
+    {
+      "id": 6,
+      "estate_title": "Student Housing Complex",
+      "segment_name": "Student Housing",
+      "description": "Fully furnished student housing complex located near campus. Includes study lounges, fitness center, and game rooms.",
+      "price": "$800/month",
+      "status": "rent",
+      "area": "500 sq ft (per room)",
+      "location": "Austin, TX",
+      "facilities": ["Study Lounge", "Fitness Center", "Game Room"],
+      "image": "https://i.ibb.co/bHjfWT7/Student-Housing-Complex.jpg"
+    },
+    {
+      "id": 7,
+      "estate_title": "Cozy Student Studio",
+      "segment_name": "Student Housing",
+      "description": "Comfortable studio apartment designed for students. Close to campus and local amenities.",
+      "price": "$600/month",
+      "status": "rent",
+      "area": "400 sq ft",
+      "location": "Boston, MA",
+      "facilities": ["Kitchenette", "Study Area", "Laundry Facilities"],
+      "image": "https://i.ibb.co/3hwh3FX/Cozy-Student-Studio.jpg"
+    },
+    {
+      "id": 8,
+      "estate_title": "Senior Living Apartment",
+      "segment_name": "Rentals",
+      "description": "Upscale senior living apartment with various amenities and services tailored for retirees.",
+      "price": "$3,000/month",
+      "status": "rent",
+      "area": "1,500 sq ft",
+      "location": "Miami, FL",
+      "facilities": ["Restaurant Dining", "Swimming Pool", "Wellness Center"],
+      "image": "https://i.ibb.co/JnVjGwv/Senior-Living-Apartment.jpg"
+    },
+    {
+      "id": 9,
+      "estate_title": "Seaside Vacation Rental",
+      "segment_name": "Rentals",
+      "description": "Charming seaside vacation rental with stunning ocean views. Ideal for a relaxing getaway.",
+      "price": "$200/night",
+      "status": "rent",
+      "area": "800 sq ft",
+      "location": "Santa Monica, CA",
+      "facilities": ["Oceanfront Patio", "BBQ Grill", "Beach Access"],
+      "image": "https://i.ibb.co/h1BQmtB/Seaside-Vacation-Rental.jpg"
+    },
+    {
+      "id": 10,
+      "estate_title": "Suburban Family Home",
+      "segment_name": "Single-family homes",
+      "description": "Lovely family home located in a peaceful suburban neighborhood. Offers a spacious backyard and convenient access to local schools and parks.",
+      "price": "$400,000",
+      "status": "sale",
+      "area": "2,000 sq ft",
+      "location": "Seattle, WA",
+      "facilities": ["Backyard", "Gourmet Kitchen", "Home Office"],
+      "image": "https://i.ibb.co/Rgys2vp/Suburban-Family-Home.jpg"
+    },
+    {
+      "id": 11,
+      "estate_title": "Downtown Condo",
+      "segment_name": "Apartments",
+      "description": "Modern condo located in the heart of downtown. Features floor-to-ceiling windows and access to rooftop amenities.",
+      "price": "$2,800/month",
+      "status": "rent",
+      "area": "1,000 sq ft",
+      "location": "San Francisco, CA",
+      "facilities": ["Rooftop Terrace", "Fitness Center", "24/7 Security"],
+      "image": "https://i.ibb.co/nLPS22v/Downtown-Condo.jpg"
+    },
+    {
+      "id": 12,
+      "estate_title": "Cozy Studio",
+      "segment_name": "Rentals",
+      "description": "Comfortable studio apartment with modern furnishings. Ideal for young professionals or students.",
+      "price": "$1,200/month",
+      "status": "rent",
+      "area": "500 sq ft",
+      "location": "Portland, OR",
+      "facilities": ["Fully Furnished", "Utilities Included", "Laundry On-site"],
+      "image": "https://i.ibb.co/kcBHhG6/Cozy-Studio.jpg"
+    }
+  ]
+  
