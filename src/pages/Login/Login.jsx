@@ -1,13 +1,17 @@
-import { useContext } from "react";
 import { Link } from "react-router-dom";
-import { AuthContext } from "../../FirebaseProvider/FirebaseProvider";
 import { useForm } from "react-hook-form";
 import SocialLogin from "./SocialLogin";
 import useAuth from "../Hooks/useAuth";
 import { Helmet } from "react-helmet-async";
+import { useNavigate } from "react-router-dom";
+import { useLocation } from 'react-router-dom';
+
 
 
 const Login = () => {
+
+    const location = useLocation();
+    const navigate = useNavigate();
 
     const {
         register,
@@ -21,6 +25,8 @@ const Login = () => {
         signInUser(email, password)
         .then(result => {
             console.log(result);
+
+            navigate(location?.state ? location.state: '/');
         })
         .catch(error => {
             console.error(error);
