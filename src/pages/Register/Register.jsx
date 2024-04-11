@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import useAuth from "../Hooks/useAuth";
+import { Helmet } from "react-helmet-async";
 
 
 const Register = () => {
@@ -28,6 +29,9 @@ const Register = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>Registration Page</title>
+            </Helmet>
             <div className="hero min-h-screen bg-base-200">
                 <div className="hero-content flex-col">
                     <div className="text-center lg:text-left">

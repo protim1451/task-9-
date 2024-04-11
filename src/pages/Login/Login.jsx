@@ -4,6 +4,7 @@ import { AuthContext } from "../../FirebaseProvider/FirebaseProvider";
 import { useForm } from "react-hook-form";
 import SocialLogin from "./SocialLogin";
 import useAuth from "../Hooks/useAuth";
+import { Helmet } from "react-helmet-async";
 
 
 const Login = () => {
@@ -30,6 +31,9 @@ const Login = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>Login Page</title>
+            </Helmet>
             <div className="hero min-h-screen bg-base-200">
                 <div className="hero-content flex-col">
                     <div className="text-center lg:text-left">
