@@ -9,6 +9,7 @@ import PropertyDetails from "../pages/PropertyDetails/PropertyDetails";
 import PrivateRoute from "./PrivateRoute";
 import Blogs from "../pages/Blogs/Blogs";
 import FullBlog from "../pages/Blogs/FullBlog";
+import UpdateProfile from "../pages/UpdateProfile/UpdateProfile";
 
 
 const router = createBrowserRouter([
@@ -46,6 +47,12 @@ const router = createBrowserRouter([
             {
                 path: '/blog/:id',
                 element: <FullBlog></FullBlog>,
+            },
+            {
+                path:'/update',
+                element: <PrivateRoute>
+                    <UpdateProfile></UpdateProfile>
+                </PrivateRoute>,
             },
         ],
     },
