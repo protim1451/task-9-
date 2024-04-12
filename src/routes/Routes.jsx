@@ -10,6 +10,7 @@ import PrivateRoute from "./PrivateRoute";
 import Blogs from "../pages/Blogs/Blogs";
 import FullBlog from "../pages/Blogs/FullBlog";
 import UpdateProfile from "../pages/UpdateProfile/UpdateProfile";
+import MyProfile from "../pages/MyProfile/MyProfile";
 
 
 const router = createBrowserRouter([
@@ -38,6 +39,12 @@ const router = createBrowserRouter([
             {
                 path: '/contact',
                 element: <ContactUs></ContactUs>,
+            },
+            {
+                path: '/profile',
+                element: <PrivateRoute>
+                    <MyProfile></MyProfile>
+                </PrivateRoute>,
             },
             {
                 path: '/blogs',

@@ -12,6 +12,11 @@ const Navbar = () => {
             <li><NavLink to='/update'>Update Profile</NavLink></li>
             <li><NavLink to='/contact'>Contact Us</NavLink></li>
             <li><NavLink to="/blogs">Blogs</NavLink></li>
+            { user &&
+                <>
+                    <li><NavLink to="/profile">My Profile</NavLink></li>
+                </>
+            }
         </>
     );
 
