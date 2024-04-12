@@ -52,6 +52,7 @@ const Register = () => {
                 pauseOnHover: true,
                 draggable: true,
                 progress: undefined,
+                onClose: () => navigate('/'),
             });
         } catch (error) {
             console.error(error);
