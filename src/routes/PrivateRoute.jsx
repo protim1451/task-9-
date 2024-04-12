@@ -1,16 +1,12 @@
-import useAuth from "../pages/Hooks/useAuth";
 import { Navigate } from "react-router-dom";
-import { useLocation } from 'react-router-dom';
+import { useLocation } from "react-router-dom";
+import useAuth from "../pages/Hooks/useAuth";
 
 const PrivateRoute = ({ children }) => {
     const { user, loading } = useAuth();
     const location = useLocation();
 
-    // Check if the current route is the property details route
-    const isPropertyDetailsRoute = location.pathname.startsWith('/property/');
-
-    if (loading && !isPropertyDetailsRoute) {
-        // Display loading spinner only if it's not the property details route
+    if (loading) {
         return <span className="text-center loading loading-infinity loading-lg"></span>;
     }
 
@@ -18,7 +14,7 @@ const PrivateRoute = ({ children }) => {
         return children;
     }
 
-    return <Navigate state={location?.pathname || '/'} to="/login"></Navigate>;
+    return <Navigate state={location.pathname} to="/login" />;
 };
 
 export default PrivateRoute;

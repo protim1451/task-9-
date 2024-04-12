@@ -11,7 +11,6 @@ const PropertyDetails = () => {
                 const response = await fetch('/property.json');
                 if (response.ok) {
                     const propertyData = await response.json();
-                    // Find the property with the matching id
                     const selectedProperty = propertyData.find(prop => prop.id === parseInt(id));
                     if (selectedProperty) {
                         setProperty(selectedProperty);
@@ -27,7 +26,7 @@ const PropertyDetails = () => {
         };
 
         fetchPropertyDetails();
-    }, [id]);
+    }, [id]); // Adding [id] as a dependency
 
     return (
         <div>

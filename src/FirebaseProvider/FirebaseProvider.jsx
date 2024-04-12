@@ -6,15 +6,10 @@ import auth from "../firebase/firebaseConfig";
 export const AuthContext = createContext(null);
 
 const googleProvider = new GoogleAuthProvider();
-
 const gitProvider = new GithubAuthProvider();
 
 const FirebaseProvider = ({ children }) => {
-
     const [user, setUser] = useState(null);
-    console.log(user);
-
-
     const [loading, setLoading] = useState(true);
 
     const createUser = (email, password) => {
@@ -22,12 +17,12 @@ const FirebaseProvider = ({ children }) => {
         return createUserWithEmailAndPassword(auth, email, password);
     }
 
-    const signInUser = (email, password) =>{
+    const signInUser = (email, password) => {
         setLoading(true);
         return signInWithEmailAndPassword(auth, email, password);
     }
 
-    const googleLogin = () =>{
+    const googleLogin = () => {
         setLoading(true);
         return signInWithPopup(auth, googleProvider)
     }
@@ -35,13 +30,11 @@ const FirebaseProvider = ({ children }) => {
     const gitLogin = () => {
         setLoading(true);
         return signInWithPopup(auth, gitProvider)
-        
     }
-
 
     const logOut = () => {
         setUser(null);
-        signOut(auth);
+        return signOut(auth);
     }
 
     useEffect(() => {
@@ -51,7 +44,8 @@ const FirebaseProvider = ({ children }) => {
                 setUser(user);
                 setLoading(false);
             } else {
-                console.log('User Signed Out');
+                setUser(null); // Ensure user is set to null on logout
+                setLoading(false);
             }
         });
         return () => {

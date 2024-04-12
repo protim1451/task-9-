@@ -21,7 +21,7 @@ const ContactUs = () => {
             </Helmet>
             <h1 className="text-3xl font-bold mb-4 text-center">Contact Us</h1>
             {submitted ? (
-                <div className="bg-green-200 text-green-800 p-4 rounded-md mb-4">
+                <div className="text-teal-800 p-4 rounded-md mb-4 text-center font-bold">
                     Thank you for contacting us! We will get back to you soon.
                 </div>
             ) : (
