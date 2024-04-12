@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 import { useLocation } from 'react-router-dom';
 
 const Register = () => {
-    const { createUser } = useAuth();
+    const { createUser, updateUserProfile } = useAuth();
 
     const navigate = useNavigate();
     const location = useLocation();

@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { FaLocationDot } from "react-icons/fa6";
+import { MdOutlinePriceChange } from "react-icons/md";
 import 'animate.css';
 
 const PropertyDetails = () => {
@@ -38,6 +39,11 @@ const PropertyDetails = () => {
                         <div className="lg:w-1/2">
                             <h1 className="text-5xl font-bold">{property.estate_title}</h1>
                             <p className="py-3">{property.description}</p>
+                            <p className="mb-3"> 
+                            <span className="font-bold text-xl">Area:</span>{' '} 
+                            <span className="text-[#1faba8]">{property.area}</span> </p>
+                            <p className="flex gap-1 items-center text-red-400"><MdOutlinePriceChange/>{property.price} 
+                            {'  '} <span className="p-1 rounded-xl font-bold bg-pink-600 text-[#1faba8]">{property.status}</span></p>
                             <div className="py-2">
                                 <h2 className="text-xl font-bold">Facilities:</h2>
                                 <ul className="list-disc ml-6">
@@ -46,7 +52,7 @@ const PropertyDetails = () => {
                                     ))}
                                 </ul>
                             </div>
-                            <p className="badge badge-outline"><FaLocationDot />{' '}{property.location}</p>
+                            <p className="badge badge-outline bg-[#2CCCD3]"><FaLocationDot />{' '}{property.location}</p>
                         </div>
                     </div>
                 </div>

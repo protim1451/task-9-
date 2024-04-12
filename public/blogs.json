@@ -1,0 +1,57 @@
+[
+    {
+      "id": 1,
+      "title": "Top 10 Interior Design Trends for 2024",
+      "date": "April 5, 2024",
+      "author": "John Doe",
+      "excerpt": "Discover the top interior design trends that are dominating 2024.",
+      "content": "Stay ahead of the curve with our exclusive guide to the hottest interior design trends of the year. From bold color palettes to sustainable materials, explore the innovations shaping modern living spaces.",
+      "imageUrl": "https://i.ibb.co/Yp0T2hX/blogs1.jpg"
+    },
+    {
+      "id": 2,
+      "title": "The Benefits of Sustainable Living",
+      "date": "April 10, 2024",
+      "author": "Jane Smith",
+      "excerpt": "Learn about the advantages of embracing sustainable living practices.",
+      "content": "Join the eco-conscious movement and discover the myriad benefits of sustainable living. From reducing your carbon footprint to supporting local economies, explore how simple lifestyle changes can make a positive impact on the planet.",
+      "imageUrl": "https://i.ibb.co/tptyzJ5/blogs2.jpg"
+    },
+    {
+      "id": 3,
+      "title": "How to Create a Cozy Home Office",
+      "date": "April 15, 2024",
+      "author": "Emily Johnson",
+      "excerpt": "Discover tips for designing and organizing a comfortable home office space.",
+      "content": "Transform your home office into a sanctuary of productivity and comfort with our expert tips and tricks. From ergonomic furniture to creative storage solutions, learn how to optimize your workspace for maximum efficiency and enjoyment.",
+      "imageUrl": "https://i.ibb.co/YhYmk49/blogs3.jpg"
+    },
+    {
+      "id": 4,
+      "title": "The Rise of Smart Homes: A Guide",
+      "date": "April 20, 2024",
+      "author": "Michael Williams",
+      "excerpt": "Learn about the latest technologies transforming traditional homes into smart ones.",
+      "content": "Step into the future of home automation with our comprehensive guide to smart home technologies. From voice-controlled assistants to energy-efficient appliances, discover how these innovative solutions are revolutionizing the way we live.",
+      "imageUrl": "https://i.ibb.co/N1rgCrB/blogs4.jpg"
+    },
+    {
+      "id": 5,
+      "title": "Tips for Decorating Small Apartments",
+      "date": "April 25, 2024",
+      "author": "Jessica Brown",
+      "excerpt": "Discover creative ideas for maximizing space and style in compact living spaces.",
+      "content": "Unlock the potential of your small living space with our expert decorating tips. From multifunctional furniture to clever storage hacks, learn how to make the most of every square foot while maintaining style and functionality.",
+      "imageUrl": "https://i.ibb.co/j8NP6GZ/blogs5.jpg"
+    },
+    {
+      "id": 6,
+      "title": "The Importance of Natural Light in Home Design",
+      "date": "April 30, 2024",
+      "author": "David Wilson",
+      "excerpt": "Learn why incorporating natural light is essential for creating inviting living spaces.",
+      "content": "Illuminate your home with the beauty of natural light and experience its transformative effects on mood and atmosphere. Discover the art of harnessing sunlight to create welcoming and uplifting living environments that enhance your well-being.",
+      "imageUrl": "https://i.ibb.co/vjXtvcQ/blogs6.jpg"
+    }
+  ]
+  

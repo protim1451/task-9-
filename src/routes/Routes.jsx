@@ -7,6 +7,8 @@ import ContactUs from "../pages/ContactUs/ContactUs";
 import NotFound from "../pages/NotFound/NotFound";
 import PropertyDetails from "../pages/PropertyDetails/PropertyDetails";
 import PrivateRoute from "./PrivateRoute";
+import Blogs from "../pages/Blogs/Blogs";
+import FullBlog from "../pages/Blogs/FullBlog";
 
 
 const router = createBrowserRouter([
@@ -35,6 +37,15 @@ const router = createBrowserRouter([
             {
                 path: '/contact',
                 element: <ContactUs></ContactUs>,
+            },
+            {
+                path: '/blogs',
+                element: <Blogs></Blogs>,
+                loader: () => fetch('/blogs.json'),
+            },
+            {
+                path: '/blog/:id',
+                element: <FullBlog></FullBlog>,
             },
         ],
     },
