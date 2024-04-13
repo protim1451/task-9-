@@ -60,7 +60,7 @@ const Login = () => {
                                 />
                                 {errors.email && <span className="text-red-500">This field is required</span>}
                             </div>
-                            <div className="form-control relative"> {/* Add relative class */}
+                            <div className="form-control relative">
                                 <label className="label">
                                     <span className="label-text">Password</span>
                                 </label>
