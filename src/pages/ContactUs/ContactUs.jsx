@@ -25,7 +25,7 @@ const ContactUs = () => {
     return (
         <div className="container mx-auto py-8">
             <Helmet>
-                <title>Contact Us</title>
+                <title>CozyHome | Contact Us</title>
             </Helmet>
             <h1 className="text-3xl font-bold mb-4 text-center">Contact Us</h1>
             {submitted ? (

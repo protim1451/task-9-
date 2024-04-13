@@ -20,7 +20,7 @@ const FullBlog = () => {
     return (
         <div className="container mx-auto py-8 grid grid-cols-1">
             <Helmet>
-                <title>Blog</title>
+                <title>CozyHome | Blog</title>
             </Helmet>
             {blog ? (
                 <div className="bg-white shadow-md rounded-md p-6">

@@ -10,7 +10,7 @@ const MyProfile = () => {
     return (
         <div className="container mx-auto py-8 flex justify-center items-center">
             <Helmet>
-                <title>My Profile</title>
+                <title>CozyHome | My Profile</title>
             </Helmet>
             {user ? (
                 <div>

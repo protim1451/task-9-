@@ -50,7 +50,7 @@ const UpdateProfile = () => {
     return (
         <div className="container mx-auto py-8">
             <Helmet>
-                <title>Update Profile</title>
+                <title>CozyHome | Update Profile</title>
             </Helmet>
             <div className="flex justify-center">
                 <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-12">

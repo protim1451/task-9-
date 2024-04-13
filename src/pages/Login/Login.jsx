@@ -29,7 +29,7 @@ const Login = () => {
         })
         .catch(error => {
             console.error(error);
-            toast.error("Invalid email or password!"); // Display toast for wrong credentials
+            toast.error("Invalid email or password!"); 
         })
       }
 
@@ -38,7 +38,7 @@ const Login = () => {
     return (
         <div>
             <Helmet>
-                <title>Login Page</title>
+                <title>CozyHome | Login Page</title>
             </Helmet>
             <div className="hero min-h-screen bg-base-200">
                 <div className="hero-content flex-col">
@@ -83,7 +83,7 @@ const Login = () => {
                     <p className="text-center">New to this Website? Go To  <Link className="text-blue-600 underline" to='/register'>Register Page</Link></p>
                 </div>
             </div>
-            <ToastContainer /> {/* Toast container */}
+            <ToastContainer /> 
         </div>
     );
 };
