@@ -6,9 +6,12 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate } from "react-router-dom";
 import { useLocation } from 'react-router-dom';
+import { FaRegEye, FaEyeSlash } from "react-icons/fa";
+import { useState } from "react";
 
 const Register = () => {
     const { createUser, updateUserProfile } = useAuth();
+    const [showPassword, setShowPassword] = useState(false);
 
     const navigate = useNavigate();
     const location = useLocation();
@@ -24,7 +27,7 @@ const Register = () => {
     const onSubmit = async (data) => {
         const { fullName, PhotoURL, email, password } = data;
 
-        // Password verification
+
         const uppercaseRegex = /[A-Z]/;
         const lowercaseRegex = /[a-z]/;
         const lengthRegex = /.{6,}/;
@@ -125,21 +128,31 @@ const Register = () => {
                                     <span className="text-red-500">This field is required</span>
                                 )}
                             </div>
-                            <div className="form-control">
+                            <div className="form-control relative">
                                 <label className="label">
                                     <span className="label-text">Password</span>
                                 </label>
                                 <input
-                                    type="password"
+                                    type={showPassword ? "text" : "password"}
                                     placeholder="password"
                                     name="password"
                                     className="input input-bordered"
                                     {...register("password", { required: true })}
                                 />
+                                <span className="absolute top-[50px] right-3 cursor-pointer" onClick={() =>
+                                    setShowPassword(!showPassword)}>
+                                    {
+                                        showPassword ? <FaRegEye /> : <FaEyeSlash />
+                                    }
+                                </span>
                                 {errors.password && (
                                     <span className="text-red-500">This field is required</span>
                                 )}
                             </div>
+                            {/* <div className="mb-2">
+                                <input type="checkbox" name="terms" id="terms" />
+                                <label htmlFor="terms">  Accept our <a href="">terms ans conditions.</a></label>
+                            </div> */}
                             <div className="form-control mt-6">
                                 <button className="btn btn-primary bg-[#2CCCD3]">Register</button>
                             </div>

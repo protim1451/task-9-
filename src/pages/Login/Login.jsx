@@ -1,39 +1,40 @@
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
-import { ToastContainer, toast } from "react-toastify"; // Import ToastContainer and toast
-import "react-toastify/dist/ReactToastify.css"; // Import the CSS for react-toastify
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import SocialLogin from "./SocialLogin";
 import useAuth from "../Hooks/useAuth";
 import { Helmet } from "react-helmet-async";
 import { useNavigate } from "react-router-dom";
 import { useLocation } from 'react-router-dom';
-
+import { FaRegEye, FaEyeSlash } from "react-icons/fa"; 
+import { useState } from "react";
 
 const Login = () => {
+    const [showPassword, setShowPassword] = useState(false);
     const location = useLocation();
     const navigate = useNavigate();
 
     const {
         register,
         handleSubmit,
-        watch,
         formState: { errors },
-      } = useForm()
-    
-      const onSubmit = (data) => {
-        const {email, password} = data;
-        signInUser(email, password)
-        .then(result => {
-            console.log(result);
-            navigate(location?.state ? location.state: '/');
-        })
-        .catch(error => {
-            console.error(error);
-            toast.error("Invalid email or password!"); 
-        })
-      }
+    } = useForm();
 
-    const {signInUser} = useAuth();
+    const onSubmit = (data) => {
+        const { email, password } = data;
+        signInUser(email, password)
+            .then(result => {
+                console.log(result);
+                navigate(location?.state ? location.state : '/');
+            })
+            .catch(error => {
+                console.error(error);
+                toast.error("Invalid email or password!");
+            });
+    };
+
+    const { signInUser } = useAuth();
 
     return (
         <div>
@@ -54,36 +55,40 @@ const Login = () => {
                                 <input type="email"
                                     placeholder="email"
                                     name="email"
-                                    className="input input-bordered" 
+                                    className="input input-bordered"
                                     {...register("email", { required: true })}
-                                    />
-                                    {errors.email && <span className="text-red-500">This field is required</span>}
+                                />
+                                {errors.email && <span className="text-red-500">This field is required</span>}
                             </div>
-                            <div className="form-control">
+                            <div className="form-control relative"> {/* Add relative class */}
                                 <label className="label">
                                     <span className="label-text">Password</span>
                                 </label>
-                                <input type="password"
+                                <input type={showPassword ? "text" : "password"}
                                     placeholder="password"
                                     name="password"
-                                    className="input input-bordered" 
+                                    className="input input-bordered"
                                     {...register("password", { required: true })}
-                                    />
-                                    {errors.password && <span className="text-red-500">This field is required</span>}
-                                <label className="label">
-                                    <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
-                                </label>
+                                />
+                                <span className="absolute top-[50px] right-3 cursor-pointer" onClick={() =>
+                                    setShowPassword(!showPassword)}> 
+                                    {
+                                        showPassword ? <FaRegEye /> : <FaEyeSlash /> 
+                                    }
+                                </span>
+                                {errors.password && <span className="text-red-500">This field is required</span>}
+                               
                             </div>
                             <div className="form-control mt-6">
                                 <button className="btn btn-primary bg-[#2CCCD3]">Login</button>
                             </div>
                         </form>
-                        <SocialLogin></SocialLogin>
+                        <SocialLogin />
                     </div>
                     <p className="text-center">New to this Website? Go To  <Link className="text-blue-600 underline" to='/register'>Register Page</Link></p>
                 </div>
             </div>
-            <ToastContainer /> 
+            <ToastContainer />
         </div>
     );
 };
