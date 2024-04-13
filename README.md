@@ -2,7 +2,7 @@
 
 Welcome to CozyHome, your go-to destination for finding the perfect living space!
 
-**Live Site URL:** [https://www.example.com](https://www.example.com)
+**Live Site URL:** [https://b9a9-real-estate-protim1451.web.app/](https://b9a9-real-estate-protim1451.web.app/)
 
 ## Features and Characteristics
 
