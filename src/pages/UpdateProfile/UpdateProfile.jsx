@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import useAuth from "../Hooks/useAuth";
 import { useForm } from "react-hook-form";
 import { ToastContainer, toast } from 'react-toastify';
+import { Helmet } from "react-helmet-async";
 
 const UpdateProfile = () => {
     const { updateUserProfile, user } = useAuth();
@@ -48,6 +49,9 @@ const UpdateProfile = () => {
 
     return (
         <div className="container mx-auto py-8">
+            <Helmet>
+                <title>Update Profile</title>
+            </Helmet>
             <div className="flex justify-center">
                 <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-12">
                     <div className="flex flex-col justify-center">

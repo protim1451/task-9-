@@ -1,5 +1,6 @@
 // FullBlog.jsx
 import React, { useState, useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 import { Link, useParams } from "react-router-dom";
 
 const FullBlog = () => {
@@ -18,6 +19,9 @@ const FullBlog = () => {
 
     return (
         <div className="container mx-auto py-8 grid grid-cols-1">
+            <Helmet>
+                <title>Blog</title>
+            </Helmet>
             {blog ? (
                 <div className="bg-white shadow-md rounded-md p-6">
                     <img src={blog.imageUrl} alt=""/>

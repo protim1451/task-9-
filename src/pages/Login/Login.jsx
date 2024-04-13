@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
+import { ToastContainer, toast } from "react-toastify"; // Import ToastContainer and toast
+import "react-toastify/dist/ReactToastify.css"; // Import the CSS for react-toastify
 import SocialLogin from "./SocialLogin";
 import useAuth from "../Hooks/useAuth";
 import { Helmet } from "react-helmet-async";
@@ -7,9 +9,7 @@ import { useNavigate } from "react-router-dom";
 import { useLocation } from 'react-router-dom';
 
 
-
 const Login = () => {
-
     const location = useLocation();
     const navigate = useNavigate();
 
@@ -25,11 +25,11 @@ const Login = () => {
         signInUser(email, password)
         .then(result => {
             console.log(result);
-
             navigate(location?.state ? location.state: '/');
         })
         .catch(error => {
             console.error(error);
+            toast.error("Invalid email or password!"); // Display toast for wrong credentials
         })
       }
 
@@ -83,6 +83,7 @@ const Login = () => {
                     <p className="text-center">New to this Website? Go To  <Link className="text-blue-600 underline" to='/register'>Register Page</Link></p>
                 </div>
             </div>
+            <ToastContainer /> {/* Toast container */}
         </div>
     );
 };

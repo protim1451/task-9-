@@ -33,7 +33,7 @@ const PropertyDetails = () => {
     return (
         <div>
             {property ? (
-                <div className="hero bg-base-200 animate__animated animate__fadeInUp">
+                <div className="hero bg-base-200 animate__animated animate__tada">
                     <div className="hero-content flex-col lg:flex-row">
                         <img src={property.image} className="rounded-lg shadow-2xl lg:w-1/2" alt={property.estate_title} />
                         <div className="lg:w-1/2">

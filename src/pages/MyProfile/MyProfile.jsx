@@ -2,12 +2,16 @@ import React from "react";
 import useAuth from "../Hooks/useAuth";
 import { Link } from "react-router-dom";
 import 'animate.css';
+import { Helmet } from "react-helmet-async";
 
 const MyProfile = () => {
     const { user } = useAuth();
 
     return (
         <div className="container mx-auto py-8 flex justify-center items-center">
+            <Helmet>
+                <title>My Profile</title>
+            </Helmet>
             {user ? (
                 <div>
                     <h1 className="text-3xl font-bold mb-4 text-center">My Profile</h1>
@@ -23,7 +27,7 @@ const MyProfile = () => {
                         </div>
                         <div className="flex justify-center items-center gap-1 mt-4 animate__animated animate__slideInRight animate__delay-2s">
                             <p className="font-semibold">To change your name or Photo click</p>
-                            <Link to="/update" className="btn text-teal-500 p-1 bg-slate-200">Update Profile</Link>
+                            <Link to="/update" className=" text-teal-500 p-1 bg-slate-200">Update Profile</Link>
                         </div>
                     </div>
                 </div>

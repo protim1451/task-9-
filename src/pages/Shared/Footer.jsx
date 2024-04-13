@@ -19,7 +19,7 @@ const Footer = () => {
                     </div>
                 </nav>
                 <aside>
-                    <p>Copyright © 2024 - All right reserved by <span className="font-bold text-[#186E75]">CozyHomes</span></p>
+                    <p>Copyright © 2024 - All right reserved by <span className="font-bold text-xl text-[#186E75] animate__animated animate__heartBeat animate__infinite">CozyHomes</span></p>
                 </aside>
             </footer>
         </div>

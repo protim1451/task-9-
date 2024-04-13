@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import useAuth from "../Hooks/useAuth";
+import 'animate.css/animate.min.css';
 import "./Navbar.css";
 
 const Navbar = () => {
     const { logOut, user } = useAuth();
+    const [currentUser, setCurrentUser] = useState(null);
+
+    useEffect(() => {
+        setCurrentUser(user); // Update the currentUser state with the latest user information
+    }, [user]);
 
     const navlinks = (
         <>
@@ -12,7 +18,7 @@ const Navbar = () => {
             <li><NavLink to='/update'>Update Profile</NavLink></li>
             <li><NavLink to='/contact'>Contact Us</NavLink></li>
             <li><NavLink to="/blogs">Blogs</NavLink></li>
-            { user &&
+            { currentUser && // Use currentUser instead of user here
                 <>
                     <li><NavLink to="/profile">My Profile</NavLink></li>
                 </>
@@ -32,18 +38,18 @@ const Navbar = () => {
                             {navlinks}
                         </ul>
                     </div>
-                    <a className="btn btn-ghost font-bold text-3xl text-[#2CCCD3]">CozyHomes</a>
+                    <a className="btn btn-ghost font-bold text-3xl text-[#2CCCD3] animate__animated animate__bounce animate__infinite">CozyHomes</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
                         {navlinks}
                     </ul>
                 </div>
-                {user?.email ? (
+                {currentUser?.email ? (
                     <div className="navbar-end relative">
                         <div className="profile-wrapper">
-                            <img className="rounded-full w-10 h-10 cursor-pointer" src={user.photoURL} alt={user.displayName} />
-                            <span className="profile-name">{user.displayName}</span>
+                            <img className="rounded-full w-10 h-10 cursor-pointer" src={currentUser.photoURL} alt={currentUser.displayName} />
+                            <span className="profile-name">{currentUser.displayName}</span>
                         </div>
                         <Link>
                             <button onClick={logOut} className="btn bg-[#2CCCD3]">Log Out</button>

@@ -43,7 +43,7 @@ const Register = () => {
         }
 
         try {
-            await createUser(email, password);
+            await createUser(email, password, fullName, PhotoURL);
             toast.success('Registration successful', {
                 position: "top-right",
                 autoClose: 3000,
