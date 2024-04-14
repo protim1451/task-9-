@@ -45,7 +45,7 @@ const Navbar = () => {
                         {navlinks}
                     </ul>
                 </div>
-                {currentUser?.email ? (
+                {currentUser? (
                     <div className="navbar-end relative">
                         <div className="profile-wrapper">
                             <img className="rounded-full w-10 h-10 cursor-pointer" src={currentUser.photoURL} alt={currentUser.displayName} />

@@ -52,6 +52,23 @@ const ContactUs = () => {
                     <button type="submit" className="bg-[#2CCCD3] hover:bg-teal-600 text-white py-2 px-4 rounded-md">Submit</button>
                 </form>
             )}
+         
+            <div className="flex justify-center gap-10">
+                <div className="mt-8">
+                    <p className="text-lg font-semibold mb-2">Contact Information:</p>
+                    <ul className="list-disc ml-6">
+                        <li>Phone: +1234567890</li>
+                        <li>Email: info@cozyhome.com</li>
+                        <li>Address: 123 Cozy Lane, City, Country</li>
+                    </ul>
+                </div>
+                <div className="mt-8">
+                    <p className="text-lg font-semibold mb-2">Office Hours:</p>
+                    <p>Monday - Friday: 9:00 AM - 5:00 PM</p>
+                    <p>Saturday: 10:00 AM - 2:00 PM</p>
+                    <p>Sunday: Closed</p>
+                </div>
+            </div>
         </div>
     );
 };
