@@ -10,7 +10,7 @@ import { FaRegEye, FaEyeSlash } from "react-icons/fa";
 import { useState } from "react";
 
 const Register = () => {
-    const { createUser, updateUserProfile } = useAuth();
+    const { createUser, updateUserProfile, logOut } = useAuth();
     const [showPassword, setShowPassword] = useState(false);
 
     const navigate = useNavigate();
@@ -47,7 +47,11 @@ const Register = () => {
 
         try {
             await createUser(email, password, fullName, PhotoURL);
-            toast.success('Registration successful', {
+            logOut();
+            toast.success(
+                <>
+                    Registration successful <br /> Login with your Credentials
+                </>, {
                 position: "top-right",
                 autoClose: 3000,
                 hideProgressBar: false,

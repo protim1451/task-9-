@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Helmet } from "react-helmet-async";
+import "animate.css/animate.min.css"; 
 
 const ContactUs = () => {
     const [name, setName] = useState('');
@@ -53,7 +54,7 @@ const ContactUs = () => {
                 </form>
             )}
          
-            <div className="flex justify-center gap-10">
+            <div className="flex justify-center gap-10 text-[#186E75] animate__animated animate__pulse animate__infinite">
                 <div className="mt-8">
                     <p className="text-lg font-semibold mb-2">Contact Information:</p>
                     <ul className="list-disc ml-6">

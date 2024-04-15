@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "animate.css/animate.min.css"; // Import animate.css
+import "animate.css/animate.min.css"; 
 
 const Footer = () => {
     return (
